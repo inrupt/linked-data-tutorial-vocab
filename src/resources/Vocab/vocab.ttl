@@ -43,16 +43,16 @@ your_vocab: a owl:Ontology, inrupt_gen:Ontology ;
     dcterms:issued "2001/01/01"^^xsd:date ;
     dcterms:license <http://purl.org/NET/rdflicense/MIT1.0> ;
     vann:preferredNamespacePrefix "your_vocab" ;
-    vann:preferredNamespaceUri "https://inrupt.com/vocab/common#" .
+    vann:preferredNamespaceUri "https://your-domain.com/vocab#" .
 
 
 
-your_vocab:MyClass a rdfs:Class, owl:Class ;
+your_vocab:SolutionClass a rdfs:Class, owl:Class ;
     rdfs:isDefinedBy your_vocab: ;
-    rdfs:label "First attempt..."@en ;
-    rdfs:label "First attempt in SPANISH..."@es ;
-    rdfs:comment "And here ya go..."@en ;
-    rdfs:comment "And here ya go in SPANISH..."@es .
+    rdfs:label "Solution Class"@en ;
+    rdfs:label "Clase de solución"@es ;
+    rdfs:comment "This class should a working solution for introducing a Class term to [your_vocab]."@en ;
+    rdfs:comment "Esta clase debería ser una solución funcional para introducir un término de clase en [your_vocab]."@es .
 
 #
 #your_vocab:YOUR_CLASS a rdfs:Class, owl:Class ;
