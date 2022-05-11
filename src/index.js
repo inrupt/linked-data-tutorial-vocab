@@ -1,4 +1,4 @@
-const { YOUR_VOCAB } = require("@inrupt/vocab-linked-data-tutorial-bundle-all-solidcommonvocab");
+const { YOUR_VOCAB } = require("../Generated/SourceCodeArtifacts/TypeScript-SolidCommonVocab");
 
 console.log(`My class has IRI (as a string) [${YOUR_VOCAB.SolutionClass.iriAsString}]`);
 console.log(`My class has IRI (as the 'value' of the RDF/JS Named Node we extend) [${YOUR_VOCAB.SolutionClass.value}]`);

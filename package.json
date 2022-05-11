@@ -2,7 +2,7 @@
   "name": "linkeddatatutorial",
   "version": "1.0.0",
   "description": "Simple tutorial demonstrating how to start working with Linked Data vocabs...",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
