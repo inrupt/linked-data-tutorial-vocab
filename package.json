@@ -12,8 +12,5 @@
   "dependencies": {
     "@inrupt/vocab-common-rdf-solidcommonvocab": "^1.0.3",
     "@inrupt/vocab-linked-data-tutorial-bundle-all-solidcommonvocab": "file:./Generated/SourceCodeArtifacts/TypeScript-SolidCommonVocab"
-  },
-  "devDependencies": {
-    "rollup": "^2.72.1"
   }
 }
