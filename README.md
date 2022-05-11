@@ -39,7 +39,7 @@ Simply run our `index.js` code, that just attempts to output vocab term
 metadata to the console.
 
 ```bash
-node src/idex.js
+node src/index.js
 ```
 
 ## Extend your vocab
