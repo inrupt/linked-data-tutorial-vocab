@@ -1,0 +1,19 @@
+{
+  "name": "linkeddatatutorial",
+  "version": "1.0.0",
+  "description": "Simple tutorial demonstrating how to start working with Linked Data vocabs...",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@inrupt/vocab-common-rdf-solidcommonvocab": "^1.0.3",
+    "@inrupt/vocab-linked-data-tutorial-bundle-all-solidcommonvocab": "file:./Generated/SourceCodeArtifacts/TypeScript-SolidCommonVocab"
+  },
+  "devDependencies": {
+    "rollup": "^2.72.1"
+  }
+}
