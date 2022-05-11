@@ -14,5 +14,5 @@ one form of module that also provides programmatic access to much of the
 common metadata we may have associated with terms in our vocabulary.
 
 ```bash
-npx @inrupt/artifact-generator generate --vocabListFile "./src/InruptTooling/Vocab/vocab-linked-data-tutorial-bundle-all.yml" --noprompt --force --publish npmInstallAndBuild
+npx @inrupt/artifact-generator generate --vocabListFile "./src/resources/Vocab/vocab-linked-data-tutorial-bundle-all.yml" --noprompt --force --publish npmInstallAndBuild
 ```
