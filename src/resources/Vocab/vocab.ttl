@@ -46,13 +46,20 @@ your_vocab: a owl:Ontology, inrupt_gen:Ontology ;
     vann:preferredNamespaceUri "https://your-domain.com/vocab#" .
 
 
+#
+# The exercise here is to translate these triples from N-Triples format to be
+# as compact as possible in Turtle...
+#
+<https://your-domain.com/vocab#SolutionClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<https://your-domain.com/vocab#SolutionClass> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://your-domain.com/vocab#> .
+<https://your-domain.com/vocab#SolutionClass> <http://www.w3.org/2000/01/rdf-schema#label> "Solution Class"@en .
+<https://your-domain.com/vocab#SolutionClass> <http://www.w3.org/2000/01/rdf-schema#label> "Clase de solución"@es .
+<https://your-domain.com/vocab#SolutionClass> <http://www.w3.org/2000/01/rdf-schema#comment> "This class should a working solution for introducing a Class term to [your_vocab]."@en .
+<https://your-domain.com/vocab#SolutionClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Esta clase debería ser una solución funcional para introducir un término de clase en [your_vocab]."@es .
+<https://your-domain.com/vocab#SolutionClass> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.wikidata.org/wiki/Q1> .
+<https://your-domain.com/vocab#SolutionClass> <http://purl.org/dc/terms/issued> "2011/12/12"^^<http://www.w3.org/2001/XMLSchema#date> .
 
-your_vocab:SolutionClass a rdfs:Class, owl:Class ;
-    rdfs:isDefinedBy your_vocab: ;
-    rdfs:label "Solution Class"@en ;
-    rdfs:label "Clase de solución"@es ;
-    rdfs:comment "This class should a working solution for introducing a Class term to [your_vocab]."@en ;
-    rdfs:comment "Esta clase debería ser una solución funcional para introducir un término de clase en [your_vocab]."@es .
+
 
 #
 #your_vocab:YOUR_CLASS a rdfs:Class, owl:Class ;
@@ -69,3 +76,16 @@ your_vocab:SolutionClass a rdfs:Class, owl:Class ;
 #    rdfs:label ""@es ;
 #    rdfs:comment ""@en ;
 #    rdfs:comment ""@es .
+
+#
+# Here's my solution to the SolutionClass:
+#
+#your_vocab:SolutionClass a rdfs:Class, owl:Class ;
+#    rdfs:isDefinedBy your_vocab: ;
+#    rdfs:label "Solution Class"@en ;
+#    rdfs:label "Clase de solución"@es ;
+#    rdfs:comment "This class should a working solution for introducing a Class term to [your_vocab]."@en ;
+#    rdfs:comment "Esta clase debería ser una solución funcional para introducir un término de clase en [your_vocab]."@es ;
+#    rdfs:seeAlso <https://www.wikidata.org/wiki/Q1> ;
+#    dcterms:issued "2011/12/12"^^xsd:date .
+#
