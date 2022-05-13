@@ -10,13 +10,13 @@ that you can then extend yourself.
 Clone down this repository to your local development machine.
 
 ```bash
-$ git clone git@github.com:inrupt/linked-data-tutorial-vocab.git
-$ cd linked-data-tutorial-vocab
+git clone git@github.com:inrupt/linked-data-tutorial-vocab.git
 ```
 
-Run install:
+Move into cloned directory, and run `npm install`:
 
 ```bash
+cd linked-data-tutorial-vocab
 npm install
 ```
 
