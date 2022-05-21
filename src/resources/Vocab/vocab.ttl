@@ -28,7 +28,7 @@ prefix your_vocab: <https://your-domain.com/vocab#>
 # created it, its suggested prefix, its license, etc.
 #
 # We can (if we like) explicitly type this vocab as being an Inrupt Artifact
-# Generator-compliant vocab (or 'Ontology') too, meaning we expect the
+# Generator-compliant vocab (or 'Ontology') too, meaning we expect Inrupt's
 # Artifact Generator to be able to enforce its set of RDF guidelines to help
 # ensure this vocab remains high-quality.
 #
@@ -38,7 +38,7 @@ your_vocab: a owl:Ontology, inrupt_gen:Ontology ;
     dcterms:title "Short title for YOUR vocabulary (in English...)"@en ;
     dcterms:title "Short title for YOUR vocabulary (in Spanish...)"@es ;
     dcterms:description "Description of YOUR vocabulary (in English...)."@en ;
-    dcterms:description "Description of YOUR vocabulary (in Spanish...)"@es ;
+    dcterms:description "Description of YOUR vocabulary (in Spanish...)."@es ;
     dcterms:creator <https://your-domain.com/webid#me-or-my-org> ;
     dcterms:issued "2001/01/01"^^xsd:date ;
     dcterms:license <http://purl.org/NET/rdflicense/MIT1.0> ;
@@ -84,8 +84,9 @@ your_vocab: a owl:Ontology, inrupt_gen:Ontology ;
 #    rdfs:isDefinedBy your_vocab: ;
 #    rdfs:label "Solution Class"@en ;
 #    rdfs:label "Clase de solución"@es ;
-#    rdfs:comment "This class should a working solution for introducing a Class term to [your_vocab]."@en ;
-#    rdfs:comment "Esta clase debería ser una solución funcional para introducir un término de clase en [your_vocab]."@es ;
+#    rdfs:comment
+#      "This class should a working solution for introducing a Class term to [your_vocab]."@en ,
+#      "Esta clase debería ser una solución funcional para introducir un término de clase en [your_vocab]."@es ;
 #    rdfs:seeAlso <https://www.wikidata.org/wiki/Q1> ;
 #    dcterms:issued "2011/12/12"^^xsd:date .
 #

@@ -17,7 +17,10 @@ console.log();
 // Here we're showing how to access the IRI and metadata from the 'SolutionClass'
 // term we provided already in the local vocabulary.
 //
-const { FOAF, DCTERMS } = require("@inrupt/vocab-common-rdf-solidcommonvocab");
+const { FOAF, DCTERMS, AS } = require("@inrupt/vocab-common-rdf-solidcommonvocab");
+console.log(`AS.Activity IRI: [${AS.Activity.iriAsString}]`);
+console.log(`AS.Activity: [${AS.Activity.comment}]`);
+
 console.log(`The IRI for FOAF Agent is [${FOAF.Agent.iriAsString}]`);
 console.log(`FOAF has English comments, for example FOAF.Agent [${FOAF.Agent.comment}]`);
 console.log();
