@@ -13,13 +13,20 @@ console.log(`SolutionClass should have a longer English comment (by default) [${
 console.log(`SolutionClass might also have a Spanish comment (but will fallback to looking for an English one if not) [${YOUR_VOCAB.SolutionClass.asLanguage("es").comment}]`);
 console.log();
 
+
 //
-// Here we're showing how to access the IRI and metadata from the 'SolutionClass'
-// term we provided already in the local vocabulary.
+// Here we're showing how to access the IRI and metadata from terms in common
+// vocabularies that Inrupt provides bundles for.
 //
-const { FOAF, DCTERMS, AS } = require("@inrupt/vocab-common-rdf-solidcommonvocab");
+const { FOAF, DCTERMS, AS, SCHEMA_INRUPT } = require("@inrupt/vocab-common-rdf-solidcommonvocab");
+
+// Firstly just show the IRI's:
+console.log(`IRI for FOAF ‘name’ property: [${FOAF.name}]`);
+console.log(`IRI for Schema.org ‘Person’ class: [${SCHEMA_INRUPT.Person}]`);
+console.log();
+
 console.log(`AS.Activity IRI: [${AS.Activity.iriAsString}]`);
-console.log(`AS.Activity: [${AS.Activity.comment}]`);
+console.log(`AS.Activity comment: [${AS.Activity.comment}]`);
 
 console.log(`The IRI for FOAF Agent is [${FOAF.Agent.iriAsString}]`);
 console.log(`FOAF has English comments, for example FOAF.Agent [${FOAF.Agent.comment}]`);
@@ -33,4 +40,3 @@ console.log(`Answer: [${DCTERMS.ISO3166.comment}]`);
 DCTERMS.ISO3166.seeAlso.forEach((link)  => {
     console.log(`Also has the following 'seeAlso' link: [${link.value}]`);
 });
-

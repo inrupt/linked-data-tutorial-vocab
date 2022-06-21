@@ -30,7 +30,7 @@ programmatic access to a lot of the common metadata that you may have
 associated with terms in your vocabulary.
 
 ```bash
-npx @inrupt/artifact-generator generate --vocabListFile "./src/resources/Vocab/vocab-linked-data-tutorial-bundle-all.yml" --noprompt --force --publish npmInstallAndBuild
+npx @inrupt/artifact-generator generate --vocabListFile "./src/resources/Vocab/vocab-linked-data-tutorial-bundle-all.yml" --noPrompt --force --publish npmInstallAndBuild
 ```
 
 ## Run simple code that uses our vocab terms...

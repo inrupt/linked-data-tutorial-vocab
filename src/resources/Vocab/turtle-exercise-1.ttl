@@ -1,0 +1,81 @@
+#
+# The exercise here is to translate these triples from N-Triples format to be
+# as compact as possible in Turtle...
+#
+
+#
+# My vocab...
+#
+<https://ibm.com/vocab#Mainframe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<https://ibm.com/vocab#petaflops> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+
+
+#
+# My instance data...
+#
+<https://ibm.com/products/mainframe/summit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ibm.com/vocab#Mainframe> ;
+  <https://ibm.com/vocab#petaflops> "148.6" ;
+  <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.datacenterdynamics.com/en/news/top500-us-keeps-top-spot-china-dominates-supercomputing-list/" .
+
+#
+# Add Citibank instance data...
+#
+
+
+
+
+
+#
+# Solution:
+#
+prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+prefix xsd:      <http://www.w3.org/2001/XMLSchema#>
+prefix owl:      <http://www.w3.org/2002/07/owl#>
+prefix schema:   <https://schema.org/>
+prefix foaf:     <http://xmlns.com/foaf/0.1/>
+
+# Vocabulary for general IBM terms...
+prefix ibm: <https://ibm.com/vocab#>
+#
+# Vocabulary specifically for IBM products (mixture of vocab and instance
+# data - includes owl:NamedIndividual's)...
+prefix ibm_product:  <https://ibm.com/product/>
+
+#
+# My vocab...
+#
+ibm:Mainframe a rdfs:Class ;
+  rdfs:label "Mainframe"@en ;
+  rdfs:comment "A large high-speed computer, especially one supporting numerous workstations or peripherals."@en .
+
+ibm:petaflops a rdf:Property ;
+  rdfs:label "Pertaflop"@en ;
+  rdfs:comment "A unit of computing speed equal to one thousand million million (10^15) floating-point operations per second."@en .
+
+#
+# My instance data...
+#
+ibm_product:Summit a ibm:Mainframe ;
+  ibm:petaflops "148.6" ;
+  rdfs:seeAlso "https://www.ibm.com/thought-leadership/summit-supercomputer/" .
+
+
+#
+# Add Citibank instance data...
+#
+prefix dbpedia: <https://dbpedia.org/resource/>
+prefix citi_vocab: <https://citi.com/vocab#>
+prefix citi_computer: <https://citi.com/internal/inventory/computer/>
+
+
+dbpedia:Citibank a schema:Organization ;
+  rdfs:label "Citibank" ;
+  schema:owns citi_computer:ibm_mf_1516 .
+
+
+citi_computer:ibm_mf_1516 a ibm_product:Summit ;
+  schema:name "Big Iron" ;
+  foaf:nick "Big Iron" ;
+  schema:streetAddress "388–390 Greenwich St., New York, NY 10013" ;
+  schema:addressCountry "USA" .
