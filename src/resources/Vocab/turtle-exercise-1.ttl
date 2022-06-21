@@ -78,7 +78,7 @@ dbpedia:Citibank a schema:Organization ;
 # Full IRI of 'Thing': https://citi.com/internal/inventory/computer/ibm_mf_1516
 #
 citi_computer:ibm_mf_1516 a ibm_product:Summit ;
-  rdfs:comment "Citibank's specific instance of an IBM Summit mainframe, bought for the analytics team with legacy internal ID of '1516'!"
+  rdfs:comment "Citibank's specific instance of an IBM Summit mainframe, bought for the analytics team with legacy internal ID of '1516'!" ;
   schema:name "Big Iron" ;
   foaf:nick "Big Iron" ;
   schema:streetAddress "388–390 Greenwich St., New York, NY 10013" ;
