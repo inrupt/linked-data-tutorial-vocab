@@ -54,13 +54,15 @@ your_vocab: rdf:type owl:Ontology ;
 <https://your-domain.com/vocab#SolutionClass> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://your-domain.com/vocab#> .
 <https://your-domain.com/vocab#SolutionClass> <http://www.w3.org/2000/01/rdf-schema#label> "Solution Class"@en .
 <https://your-domain.com/vocab#SolutionClass> <http://www.w3.org/2000/01/rdf-schema#label> "Clase de solución"@es .
-<https://your-domain.com/vocab#SolutionClass> <http://www.w3.org/2000/01/rdf-schema#comment> "This class should a working solution for introducing a Class term to [your_vocab]."@en .
+<https://your-domain.com/vocab#SolutionClass> <http://www.w3.org/2000/01/rdf-schema#comment> "This class should be a working solution for introducing a Class term to [your_vocab]."@en .
 <https://your-domain.com/vocab#SolutionClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Esta clase debería ser una solución funcional para introducir un término de clase en [your_vocab]."@es .
 <https://your-domain.com/vocab#SolutionClass> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.wikidata.org/wiki/Q1> .
 <https://your-domain.com/vocab#SolutionClass> <http://purl.org/dc/terms/issued> "2011/12/12"^^<http://www.w3.org/2001/XMLSchema#date> .
 
 
 
+#
+# Very simple templates for a new Class or Property:
 #
 #your_vocab:YOUR_CLASS a rdfs:Class ;
 #    rdfs:isDefinedBy your_vocab: ;
@@ -78,12 +80,11 @@ your_vocab: rdf:type owl:Ontology ;
 #    rdfs:comment ""@es .
 
 #
-# Here's my solution to the SolutionClass:
+# SOLUTION:
 #
 #your_vocab:SolutionClass a rdfs:Class ;
 #    rdfs:isDefinedBy your_vocab: ;
-#    rdfs:label "Solution Class"@en ;
-#    rdfs:label "Clase de solución"@es ;
+#    rdfs:label "Solution Class"@en , "Clase de solución"@es ;
 #    rdfs:comment
 #      "This class should a working solution for introducing a Class term to [your_vocab]."@en ,
 #      "Esta clase debería ser una solución funcional para introducir un término de clase en [your_vocab]."@es ;
