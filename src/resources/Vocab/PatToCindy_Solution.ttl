@@ -1,0 +1,59 @@
+prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+prefix schema:   <http://schema.org/>
+prefix foaf:     <http://xmlns.com/foaf/0.1/>
+
+#
+# These triples are provided as an exercise to turn into more concise Turtle,
+# and then draw out the resulting graph as circles and labelled lines between
+# them.
+#
+# <https://id.pod.com/pat/#me>             <https://schema.org/owns>                         <https://storage.inrupt.com/pmcb/bobby> .
+# <https://storage.inrupt.com/pmcb/bobby>  <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.productontology.org/id/Dog> .
+# <https://storage.inrupt.com/pmcb/bobby>  schema:name                                       "Bobby" .
+# <https://storage.inrupt.com/pmcb/bobby>  <https://schema.org/birthDate>                    "2021" .
+# <https://storage.inrupt.com/pmcb/bobby>  <https://www.wikidata.org/wiki/Q38829>            "Jack Russell Terrier" .
+# <https://storage.inrupt.com/pmcb/bobby>  schema:parent                                     <https://joe.pod.com/public/pets/cindy> .
+# <https://joe.pod.com/public/pets/cindy>  rdf:type                                          <http://www.productontology.org/id/Dog> .
+# <https://joe.pod.com/public/pets/cindy>  <http://xmlns.com/foaf/0.1/name>                  "Cindy" .
+
+
+#
+# SOLUTION:
+# Using more prefixes, and producing more concise Turtle...
+#
+prefix pat: <https://id.pod.com/pat/#me>
+prefix joe: <https://joe.pod.com/webid#me>
+
+prefix bobby_the_dog: <https://storage.inrupt.com/pmcb/bobby>
+prefix cindy_the_dog: <https://joe.pod.com/public/pets/cindy>
+
+prefix wiki: <https://www.wikidata.org/wiki/>
+prefix foaf: <http://xmlns.com/foaf/0.1/>
+prefix po: <http://www.productontology.org/id/>
+
+#
+# Instance data...
+#
+pat: schema:owns bobby_the_dog: .
+
+bobby_the_dog: a po:Dog ;
+  schema:name "Bobby"@en, "Bobik"@sk ;
+  schema:birthDate "2021"^^xsd:year ;
+  wiki:Q38829 "Jack Russell Terrier"@en , wiki:Q38287 ;
+  schema:parent cindy_the_dog: .
+
+cindy_the_dog: a po:Dog ;
+  foaf:name "Cindy"@en .
+
+joe: rdfs:label "Joe"@en ;
+  schema:owns cindy_the_dog: .
+
+#
+# ...and then we can simply run a HTTP server in the folder containing this
+# file (e.g., `npm i -g http-server`) and then import this data from the URL:
+#   http://locahost:8080/PatToCindy_Solution.ttl
+# ...and then visualize the graph by showing any node, such as Cindy at
+#   https://joe.pod.com/public/pets/cindy
+# ...and expanding all the nodes from there.
+#

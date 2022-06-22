@@ -11,9 +11,11 @@
   "license": "ISC",
   "dependencies": {
     "@inrupt/vocab-common-rdf-solidcommonvocab": "^1.0.3",
-    "@inrupt/vocab-linked-data-tutorial-bundle-all-solidcommonvocab": "file:./Generated/SourceCodeArtifacts/TypeScript-SolidCommonVocab"
+    "@inrupt/vocab-linked-data-tutorial-bundle-all-solidcommonvocab": "file:./Generated/SourceCodeArtifacts/TypeScript-SolidCommonVocab",
+    "rdf-js": "^4.0.2"
   },
   "devDependencies": {
+    "@rdfjs/types": "^1.1.0",
     "rollup": "^2.72.1"
   }
 }

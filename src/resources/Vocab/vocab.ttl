@@ -21,7 +21,7 @@ prefix inrupt_gen:    <https://inrupt.com/vocab/tool/artifact_generator#>
 # specific vocabulary (i.e., copy this template, and then search-and-replace
 # all occurrences of both the prefix and it's IRI value)...
 #
-prefix your_vocab: <https://your-domain.com/vocab#>
+prefix your_vocab: <https://your-org.com/vocab#>
 
 #
 # Describe our vocabulary - i.e., an English description, its version, who
@@ -32,7 +32,7 @@ prefix your_vocab: <https://your-domain.com/vocab#>
 # Artifact Generator to be able to enforce its set of RDF guidelines to help
 # ensure this vocab remains high-quality.
 #
-your_vocab: a owl:Ontology, inrupt_gen:Ontology ;
+your_vocab: rdf:type owl:Ontology ;
     owl:versionInfo "0.0.1" ;
     owl:versionIRI your_vocab:0.0.1 ;
     dcterms:title "Short title for YOUR vocabulary (in English...)"@en ;
@@ -54,7 +54,7 @@ your_vocab: a owl:Ontology, inrupt_gen:Ontology ;
 <https://your-domain.com/vocab#SolutionClass> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://your-domain.com/vocab#> .
 <https://your-domain.com/vocab#SolutionClass> <http://www.w3.org/2000/01/rdf-schema#label> "Solution Class"@en .
 <https://your-domain.com/vocab#SolutionClass> <http://www.w3.org/2000/01/rdf-schema#label> "Clase de solución"@es .
-<https://your-domain.com/vocab#SolutionClass> <http://www.w3.org/2000/01/rdf-schema#comment> "This class should a working solution for introducing a Class term to [your_vocab]."@en .
+<https://your-domain.com/vocab#SolutionClass> <http://www.w3.org/2000/01/rdf-schema#comment> "This class should be a working solution for introducing a Class term to [your_vocab]."@en .
 <https://your-domain.com/vocab#SolutionClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Esta clase debería ser una solución funcional para introducir un término de clase en [your_vocab]."@es .
 <https://your-domain.com/vocab#SolutionClass> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.wikidata.org/wiki/Q1> .
 <https://your-domain.com/vocab#SolutionClass> <http://purl.org/dc/terms/issued> "2011/12/12"^^<http://www.w3.org/2001/XMLSchema#date> .
@@ -62,7 +62,9 @@ your_vocab: a owl:Ontology, inrupt_gen:Ontology ;
 
 
 #
-#your_vocab:YOUR_CLASS a rdfs:Class, owl:Class ;
+# Very simple templates for a new Class or Property:
+#
+#your_vocab:YOUR_CLASS a rdfs:Class ;
 #    rdfs:isDefinedBy your_vocab: ;
 #    rdfs:label ""@en ;
 #    rdfs:label ""@es ;
@@ -70,7 +72,7 @@ your_vocab: a owl:Ontology, inrupt_gen:Ontology ;
 #    rdfs:comment ""@es .
 
 #
-#your_vocab:YOUR_PROPERTY a rdf:Property, owl:ObjectProperty ;
+#your_vocab:YOUR_PROPERTY a rdf:Property ;
 #    rdfs:isDefinedBy your_vocab: ;
 #    rdfs:label ""@en ;
 #    rdfs:label ""@es ;
@@ -78,12 +80,11 @@ your_vocab: a owl:Ontology, inrupt_gen:Ontology ;
 #    rdfs:comment ""@es .
 
 #
-# Here's my solution to the SolutionClass:
+# SOLUTION:
 #
-#your_vocab:SolutionClass a rdfs:Class, owl:Class ;
+#your_vocab:SolutionClass a rdfs:Class ;
 #    rdfs:isDefinedBy your_vocab: ;
-#    rdfs:label "Solution Class"@en ;
-#    rdfs:label "Clase de solución"@es ;
+#    rdfs:label "Solution Class"@en , "Clase de solución"@es ;
 #    rdfs:comment
 #      "This class should a working solution for introducing a Class term to [your_vocab]."@en ,
 #      "Esta clase debería ser una solución funcional para introducir un término de clase en [your_vocab]."@es ;
