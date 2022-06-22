@@ -1,4 +1,4 @@
-const { YOUR_VOCAB } = require("../Generated/SourceCodeArtifacts/TypeScript-SolidCommonVocab");
+const { IBM_VOCAB, YOUR_VOCAB } = require("../Generated/SourceCodeArtifacts/TypeScript-SolidCommonVocab");
 
 //
 // Here we show how to access the IRI and metadata from the 'SolutionClass'
@@ -40,3 +40,7 @@ console.log(`Answer: [${DCTERMS.ISO3166.comment}]`);
 DCTERMS.ISO3166.seeAlso.forEach((link)  => {
     console.log(`Also has the following 'seeAlso' link: [${link.value}]`);
 });
+
+
+
+console.log(`What is the identifier for IBM's defintion of what a Mainframe is: [${IBM_VOCAB.Mainframe}]`);

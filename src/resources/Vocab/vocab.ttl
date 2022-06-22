@@ -21,7 +21,7 @@ prefix inrupt_gen:    <https://inrupt.com/vocab/tool/artifact_generator#>
 # specific vocabulary (i.e., copy this template, and then search-and-replace
 # all occurrences of both the prefix and it's IRI value)...
 #
-prefix your_vocab: <https://your-domain.com/vocab#>
+prefix your_vocab: <https://your-org.com/vocab#>
 
 #
 # Describe our vocabulary - i.e., an English description, its version, who
@@ -32,7 +32,7 @@ prefix your_vocab: <https://your-domain.com/vocab#>
 # Artifact Generator to be able to enforce its set of RDF guidelines to help
 # ensure this vocab remains high-quality.
 #
-your_vocab: a owl:Ontology, inrupt_gen:Ontology ;
+your_vocab: rdf:type owl:Ontology ;
     owl:versionInfo "0.0.1" ;
     owl:versionIRI your_vocab:0.0.1 ;
     dcterms:title "Short title for YOUR vocabulary (in English...)"@en ;
@@ -62,7 +62,7 @@ your_vocab: a owl:Ontology, inrupt_gen:Ontology ;
 
 
 #
-#your_vocab:YOUR_CLASS a rdfs:Class, owl:Class ;
+#your_vocab:YOUR_CLASS a rdfs:Class ;
 #    rdfs:isDefinedBy your_vocab: ;
 #    rdfs:label ""@en ;
 #    rdfs:label ""@es ;
@@ -70,7 +70,7 @@ your_vocab: a owl:Ontology, inrupt_gen:Ontology ;
 #    rdfs:comment ""@es .
 
 #
-#your_vocab:YOUR_PROPERTY a rdf:Property, owl:ObjectProperty ;
+#your_vocab:YOUR_PROPERTY a rdf:Property ;
 #    rdfs:isDefinedBy your_vocab: ;
 #    rdfs:label ""@en ;
 #    rdfs:label ""@es ;
@@ -80,7 +80,7 @@ your_vocab: a owl:Ontology, inrupt_gen:Ontology ;
 #
 # Here's my solution to the SolutionClass:
 #
-#your_vocab:SolutionClass a rdfs:Class, owl:Class ;
+#your_vocab:SolutionClass a rdfs:Class ;
 #    rdfs:isDefinedBy your_vocab: ;
 #    rdfs:label "Solution Class"@en ;
 #    rdfs:label "Clase de solución"@es ;
